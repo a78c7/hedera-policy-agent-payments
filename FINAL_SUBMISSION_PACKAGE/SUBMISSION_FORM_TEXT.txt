@@ -14,7 +14,7 @@ All value-moving actions use RETURN_BYTES mode with an explicit per-transaction 
 Core dependency on the official hedera-agent-kit (Python). Used HederaLangchainToolkit with Configuration/Context loading core_account_plugin, core_token_plugin (for HBAR + HTS/USDC), and consensus plugins. Implemented custom PaymentPolicy (extending the policy pattern) for amount caps, recipient whitelisting, token allowlisting, and rate limiting. Attached HcsAuditTrailHook for immutable logging to HCS. Primary execution mode is RETURN_BYTES for safety. Prepared MCP server exposure. All patterns follow the official v4 examples and HOOKS_AND_POLICIES documentation.
 
 **GitHub Repository URL:**
-[Replace with your public repo URL, e.g. https://github.com/yourname/hedera-policy-agent-payments]
+https://github.com/a78c7/hedera-policy-agent-payments
 
 **Live Demo URL (required for Week 5):**
 [Replace with your deployed Streamlit URL, e.g. https://your-app.onrender.com]
