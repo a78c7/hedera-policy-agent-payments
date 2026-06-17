@@ -1,0 +1,19 @@
+Hedera Policy Agent (Week 5) submission ready.
+
+Built a policy-constrained payment agent using the official Hedera Agent Kit (Python).
+
+- Custom PaymentPolicy (amount caps, recipient whitelist, token allowlist, rate limits) enforced at the code level via Hooks & Policies
+- Full HCS immutable audit trail for every action
+- RETURN_BYTES + explicit human approval UI (complies with "impossible to move funds without consent")
+- Supports HBAR + HTS USDC
+- Live interactive demo + 100+ tests
+
+Repo + demo coming right after push/deploy.
+
+Huge thanks to the Hedera AI Studio team and the Agent Kit maintainers for the excellent hooks/policies framework.
+
+@hedera @hedera_devs
+
+#Hedera #AIAgents #HederaAgentKit
+
+[Attach 1-2 good screenshots/GIFs of the UI showing policy block + successful constrained payment + audit log]

@@ -1,0 +1,33 @@
+# Hedera Week 5 Submission Form - Ready to Copy
+
+**Project Title / Tile (1-2 lines, will be public):**
+Policy-constrained AI payment agent on Hedera using custom Hooks & Policies for safe, auditable HBAR/USDC transfers with deterministic limits and human-in-the-loop approval.
+
+**Detailed Description (1-3 paragraphs):**
+This submission for the Hedera Policy Agent bounty (Week 5) delivers a production-oriented AI agent that executes policy-constrained payments in HBAR or USDC while enforcing business rules and security via the Hedera Agent Kit's Hooks and Policies system.
+
+The agent uses core Hedera plugins (account, token/HTS for USDC, consensus) extended with custom policies (recipient/amount caps, tool rejection, session rate limits) and hooks (immutable HCS audit trails for every payment intent and result, fully verifiable on mirror nodes and HashScan).
+
+All value-moving actions use RETURN_BYTES mode with an explicit per-transaction human approval UI, making it impossible for the agent to move funds without clear consent. The implementation fully complies with the bounty safety requirements. A live interactive web demo allows policy configuration, natural language payment requests, transaction preview, approve/cancel, and real-time audit log viewing. The project includes comprehensive tests, excellent documentation, and was built with deep, authentic use of the Agent Kit during the campaign window.
+
+**Integration Details (how you used the Agent Kit, plugins, MCPs, etc.):**
+Core dependency on the official hedera-agent-kit (Python). Used HederaLangchainToolkit with Configuration/Context loading core_account_plugin, core_token_plugin (for HBAR + HTS/USDC), and consensus plugins. Implemented custom PaymentPolicy (extending the policy pattern) for amount caps, recipient whitelisting, token allowlisting, and rate limiting. Attached HcsAuditTrailHook for immutable logging to HCS. Primary execution mode is RETURN_BYTES for safety. Prepared MCP server exposure. All patterns follow the official v4 examples and HOOKS_AND_POLICIES documentation.
+
+**GitHub Repository URL:**
+[Replace with your public repo URL, e.g. https://github.com/yourname/hedera-policy-agent-payments]
+
+**Live Demo URL (required for Week 5):**
+[Replace with your deployed Streamlit URL, e.g. https://your-app.onrender.com]
+
+**Feedback Issue URL (required):**
+[Replace with the GitHub issue you opened on hashgraph/hedera-agent-kit-py or -js, e.g. https://github.com/hashgraph/hedera-agent-kit-py/issues/1234]
+
+**Payout Wallet Address (HBAR):**
+[Your HBAR account ID or EVM address for receiving the prize]
+
+**Additional Notes / Images:**
+(Attach 4-6 screenshots: main UI, policy blocking in action, successful constrained transfer + HCS log link, architecture, demo flow, etc.)
+
+---
+Copy the sections above into the official form at https://ai-bounties.hedera.com/
+Do not submit until you have completed the pre-submission checklist and received final confirmation to proceed with the actual submission.
