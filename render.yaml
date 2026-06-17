@@ -1,0 +1,30 @@
+# Render.com deployment configuration for Hedera Policy Agent Demo
+# This allows one-click or easy deployment from the GitHub repo.
+
+services:
+  - type: web
+    name: hedera-policy-agent-demo
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run demo_ui.py --server.port $PORT --server.address 0.0.0.0
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.6
+      # For demo purposes, placeholder keys are fine.
+      # The UI demonstrates policy logic even without real Hedera calls.
+      - key: ACCOUNT_ID
+        value: 0.0.0  # Placeholder - replace with real testnet in production demo if desired
+      - key: PRIVATE_KEY
+        value: placeholder
+      - key: OPENAI_API_KEY
+        value: placeholder  # Or use Groq free tier key for live LLM
+      # Add more from .env.example as needed
+    healthCheckPath: /  # Streamlit serves on root
+    runtime: python3
+
+# Note: After connecting this repo on Render dashboard (or if using render CLI),
+# the service will build and deploy automatically on push.
+# Free tier may sleep; ping the URL periodically during the bounty period if needed.
